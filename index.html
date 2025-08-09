@@ -1,1 +1,578 @@
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-12 px-4">
+    <div class="max-w-md mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Application Form</h1>
+                <p class="text-gray-600">Please fill out all fields to complete your application.</p>
+            </div>
+            
+            <form id="contactForm" class="space-y-6">
+                <!-- Personal Information Section -->
+                <div class="border-b border-gray-200 pb-4 mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                        </svg>
+                        Personal Information
+                    </h2>
+                    <p class="text-sm text-gray-600">Please provide your basic personal details</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label for="firstName" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                            First Name
+                        </label>
+                        <input type="text" id="firstName" name="firstName" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                               placeholder="First name">
+                    </div>
+                    <div>
+                        <label for="middleName" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                            Middle Name
+                        </label>
+                        <input type="text" id="middleName" name="middleName"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                               placeholder="Middle name">
+                    </div>
+                    <div>
+                        <label for="lastName" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                            Last Name
+                        </label>
+                        <input type="text" id="lastName" name="lastName" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                               placeholder="Last name">
+                    </div>
+                </div>
+                
+                <!-- Contact Information Section -->
+                <div class="border-b border-gray-200 pb-4 mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                        Contact Information
+                    </h2>
+                    <p class="text-sm text-gray-600">How can we reach you?</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="email" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            Email Address
+                        </label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                               placeholder="Enter your email address">
+                    </div>
+                    <div>
+                        <label for="phone" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                            </svg>
+                            Phone Number
+                        </label>
+                        <div class="flex gap-2">
+                            <select id="countryCode" name="countryCode" required
+                                    class="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none bg-white">
+                                <option value="+93">🇦🇫 +93</option>
+                                <option value="+355">🇦🇱 +355</option>
+                                <option value="+213">🇩🇿 +213</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+376">🇦🇩 +376</option>
+                                <option value="+244">🇦🇴 +244</option>
+                                <option value="+54">🇦🇷 +54</option>
+                                <option value="+374">🇦🇲 +374</option>
+                                <option value="+61">🇦🇺 +61</option>
+                                <option value="+43">🇦🇹 +43</option>
+                                <option value="+994">🇦🇿 +994</option>
+                                <option value="+973">🇧🇭 +973</option>
+                                <option value="+880" selected>🇧🇩 +880</option>
+                                <option value="+375">🇧🇾 +375</option>
+                                <option value="+32">🇧🇪 +32</option>
+                                <option value="+501">🇧🇿 +501</option>
+                                <option value="+229">🇧🇯 +229</option>
+                                <option value="+975">🇧🇹 +975</option>
+                                <option value="+591">🇧🇴 +591</option>
+                                <option value="+55">🇧🇷 +55</option>
+                                <option value="+673">🇧🇳 +673</option>
+                                <option value="+359">🇧🇬 +359</option>
+                                <option value="+226">🇧🇫 +226</option>
+                                <option value="+257">🇧🇮 +257</option>
+                                <option value="+855">🇰🇭 +855</option>
+                                <option value="+237">🇨🇲 +237</option>
+                                <option value="+1">🇨🇦 +1</option>
+                                <option value="+238">🇨🇻 +238</option>
+                                <option value="+236">🇨🇫 +236</option>
+                                <option value="+235">🇹🇩 +235</option>
+                                <option value="+56">🇨🇱 +56</option>
+                                <option value="+86">🇨🇳 +86</option>
+                                <option value="+57">🇨🇴 +57</option>
+                                <option value="+269">🇰🇲 +269</option>
+                                <option value="+242">🇨🇬 +242</option>
+                                <option value="+243">🇨🇩 +243</option>
+                                <option value="+506">🇨🇷 +506</option>
+                                <option value="+385">🇭🇷 +385</option>
+                                <option value="+53">🇨🇺 +53</option>
+                                <option value="+357">🇨🇾 +357</option>
+                                <option value="+420">🇨🇿 +420</option>
+                                <option value="+45">🇩🇰 +45</option>
+                                <option value="+253">🇩🇯 +253</option>
+                                <option value="+593">🇪🇨 +593</option>
+                                <option value="+20">🇪🇬 +20</option>
+                                <option value="+503">🇸🇻 +503</option>
+                                <option value="+240">🇬🇶 +240</option>
+                                <option value="+291">🇪🇷 +291</option>
+                                <option value="+372">🇪🇪 +372</option>
+                                <option value="+251">🇪🇹 +251</option>
+                                <option value="+358">🇫🇮 +358</option>
+                                <option value="+33">🇫🇷 +33</option>
+                                <option value="+241">🇬🇦 +241</option>
+                                <option value="+220">🇬🇲 +220</option>
+                                <option value="+995">🇬🇪 +995</option>
+                                <option value="+49">🇩🇪 +49</option>
+                                <option value="+233">🇬🇭 +233</option>
+                                <option value="+30">🇬🇷 +30</option>
+                                <option value="+502">🇬🇹 +502</option>
+                                <option value="+224">🇬🇳 +224</option>
+                                <option value="+245">🇬🇼 +245</option>
+                                <option value="+592">🇬🇾 +592</option>
+                                <option value="+509">🇭🇹 +509</option>
+                                <option value="+504">🇭🇳 +504</option>
+                                <option value="+852">🇭🇰 +852</option>
+                                <option value="+36">🇭🇺 +36</option>
+                                <option value="+354">🇮🇸 +354</option>
+                                <option value="+91">🇮🇳 +91</option>
+                                <option value="+62">🇮🇩 +62</option>
+                                <option value="+98">🇮🇷 +98</option>
+                                <option value="+964">🇮🇶 +964</option>
+                                <option value="+353">🇮🇪 +353</option>
+                                <option value="+972">🇮🇱 +972</option>
+                                <option value="+39">🇮🇹 +39</option>
+                                <option value="+81">🇯🇵 +81</option>
+                                <option value="+962">🇯🇴 +962</option>
+                                <option value="+7">🇰🇿 +7</option>
+                                <option value="+254">🇰🇪 +254</option>
+                                <option value="+686">🇰🇮 +686</option>
+                                <option value="+850">🇰🇵 +850</option>
+                                <option value="+82">🇰🇷 +82</option>
+                                <option value="+965">🇰🇼 +965</option>
+                                <option value="+996">🇰🇬 +996</option>
+                                <option value="+856">🇱🇦 +856</option>
+                                <option value="+371">🇱🇻 +371</option>
+                                <option value="+961">🇱🇧 +961</option>
+                                <option value="+266">🇱🇸 +266</option>
+                                <option value="+231">🇱🇷 +231</option>
+                                <option value="+218">🇱🇾 +218</option>
+                                <option value="+423">🇱🇮 +423</option>
+                                <option value="+370">🇱🇹 +370</option>
+                                <option value="+352">🇱🇺 +352</option>
+                                <option value="+853">🇲🇴 +853</option>
+                                <option value="+389">🇲🇰 +389</option>
+                                <option value="+261">🇲🇬 +261</option>
+                                <option value="+265">🇲🇼 +265</option>
+                                <option value="+60">🇲🇾 +60</option>
+                                <option value="+960">🇲🇻 +960</option>
+                                <option value="+223">🇲🇱 +223</option>
+                                <option value="+356">🇲🇹 +356</option>
+                                <option value="+692">🇲🇭 +692</option>
+                                <option value="+222">🇲🇷 +222</option>
+                                <option value="+230">🇲🇺 +230</option>
+                                <option value="+52">🇲🇽 +52</option>
+                                <option value="+691">🇫🇲 +691</option>
+                                <option value="+373">🇲🇩 +373</option>
+                                <option value="+377">🇲🇨 +377</option>
+                                <option value="+976">🇲🇳 +976</option>
+                                <option value="+382">🇲🇪 +382</option>
+                                <option value="+212">🇲🇦 +212</option>
+                                <option value="+258">🇲🇿 +258</option>
+                                <option value="+95">🇲🇲 +95</option>
+                                <option value="+264">🇳🇦 +264</option>
+                                <option value="+674">🇳🇷 +674</option>
+                                <option value="+977">🇳🇵 +977</option>
+                                <option value="+31">🇳🇱 +31</option>
+                                <option value="+64">🇳🇿 +64</option>
+                                <option value="+505">🇳🇮 +505</option>
+                                <option value="+227">🇳🇪 +227</option>
+                                <option value="+234">🇳🇬 +234</option>
+                                <option value="+47">🇳🇴 +47</option>
+                                <option value="+968">🇴🇲 +968</option>
+                                <option value="+92">🇵🇰 +92</option>
+                                <option value="+680">🇵🇼 +680</option>
+                                <option value="+507">🇵🇦 +507</option>
+                                <option value="+675">🇵🇬 +675</option>
+                                <option value="+595">🇵🇾 +595</option>
+                                <option value="+51">🇵🇪 +51</option>
+                                <option value="+63">🇵🇭 +63</option>
+                                <option value="+48">🇵🇱 +48</option>
+                                <option value="+351">🇵🇹 +351</option>
+                                <option value="+974">🇶🇦 +974</option>
+                                <option value="+40">🇷🇴 +40</option>
+                                <option value="+7">🇷🇺 +7</option>
+                                <option value="+250">🇷🇼 +250</option>
+                                <option value="+685">🇼🇸 +685</option>
+                                <option value="+378">🇸🇲 +378</option>
+                                <option value="+966">🇸🇦 +966</option>
+                                <option value="+221">🇸🇳 +221</option>
+                                <option value="+381">🇷🇸 +381</option>
+                                <option value="+248">🇸🇨 +248</option>
+                                <option value="+232">🇸🇱 +232</option>
+                                <option value="+65">🇸🇬 +65</option>
+                                <option value="+421">🇸🇰 +421</option>
+                                <option value="+386">🇸🇮 +386</option>
+                                <option value="+677">🇸🇧 +677</option>
+                                <option value="+252">🇸🇴 +252</option>
+                                <option value="+27">🇿🇦 +27</option>
+                                <option value="+34">🇪🇸 +34</option>
+                                <option value="+94">🇱🇰 +94</option>
+                                <option value="+249">🇸🇩 +249</option>
+                                <option value="+597">🇸🇷 +597</option>
+                                <option value="+268">🇸🇿 +268</option>
+                                <option value="+46">🇸🇪 +46</option>
+                                <option value="+41">🇨🇭 +41</option>
+                                <option value="+963">🇸🇾 +963</option>
+                                <option value="+886">🇹🇼 +886</option>
+                                <option value="+992">🇹🇯 +992</option>
+                                <option value="+255">🇹🇿 +255</option>
+                                <option value="+66">🇹🇭 +66</option>
+                                <option value="+670">🇹🇱 +670</option>
+                                <option value="+228">🇹🇬 +228</option>
+                                <option value="+676">🇹🇴 +676</option>
+                                <option value="+216">🇹🇳 +216</option>
+                                <option value="+90">🇹🇷 +90</option>
+                                <option value="+993">🇹🇲 +993</option>
+                                <option value="+688">🇹🇻 +688</option>
+                                <option value="+256">🇺🇬 +256</option>
+                                <option value="+380">🇺🇦 +380</option>
+                                <option value="+971">🇦🇪 +971</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+598">🇺🇾 +598</option>
+                                <option value="+998">🇺🇿 +998</option>
+                                <option value="+678">🇻🇺 +678</option>
+                                <option value="+58">🇻🇪 +58</option>
+                                <option value="+84">🇻🇳 +84</option>
+                                <option value="+967">🇾🇪 +967</option>
+                                <option value="+260">🇿🇲 +260</option>
+                                <option value="+263">🇿🇼 +263</option>
+                            </select>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                                   placeholder="1234567890">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="birthdate" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                            </svg>
+                            Date of Birth
+                        </label>
+                        <input type="date" id="birthdate" name="birthdate" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none">
+                    </div>
+                    <div>
+                        <label for="gender" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zM8 6a2 2 0 114 0v1H8V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            Gender
+                        </label>
+                        <select id="gender" name="gender" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none">
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="non-binary">Non-binary</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="occupation" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                        <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+                        </svg>
+                        Job/Occupation
+                    </label>
+                    <input type="text" id="occupation" name="occupation" required
+                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                           placeholder="Enter your job title or occupation">
+                </div>
+                
+                <!-- Address Information Section -->
+                <div class="border-b border-gray-200 pb-4 mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Address Information
+                    </h2>
+                    <p class="text-sm text-gray-600">Please provide your current and permanent addresses</p>
+                </div>
+                
+                <div>
+                    <label class="flex items-center text-sm font-medium text-gray-700 mb-4">
+                        <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                        </svg>
+                        Current Address
+                    </label>
+                    <div class="space-y-4 p-4 bg-gray-50 rounded-lg">
+                        <input type="text" id="currentStreet" name="currentStreet" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                               placeholder="Street address">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <input type="text" id="currentCity" name="currentCity" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                                   placeholder="City">
+                            <input type="text" id="currentState" name="currentState" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                                   placeholder="State/Province">
+                            <input type="text" id="currentZip" name="currentZip" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                                   placeholder="ZIP/Postal Code">
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <label class="flex items-center text-sm font-medium text-gray-700">
+                            <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                            </svg>
+                            Permanent Address
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" id="sameAsCurrentAddress" class="mr-2 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                            <span class="text-sm text-gray-600">Same as current address</span>
+                        </label>
+                    </div>
+                    <div id="permanentAddressFields" class="space-y-4 p-4 bg-gray-50 rounded-lg">
+                        <input type="text" id="permanentStreet" name="permanentStreet" required
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                               placeholder="Street address">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <input type="text" id="permanentCity" name="permanentCity" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                                   placeholder="City">
+                            <input type="text" id="permanentState" name="permanentState" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                                   placeholder="State/Province">
+                            <input type="text" id="permanentZip" name="permanentZip" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none"
+                                   placeholder="ZIP/Postal Code">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Information Section -->
+                <div class="border-b border-gray-200 pb-4 mb-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-1 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                        </svg>
+                        Additional Information
+                    </h2>
+                    <p class="text-sm text-gray-600">Please provide any additional details</p>
+                </div>
+                
+                <div>
+                    <label for="subject" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                        <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                        Subject
+                    </label>
+                    <select id="subject" name="subject" required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none">
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="business">Business Partnership</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="message" class="flex items-center text-sm font-medium text-gray-700 mb-2">
+                        <svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"></path>
+                        </svg>
+                        Message
+                    </label>
+                    <textarea id="message" name="message" rows="4" required
+                              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 outline-none resize-none"
+                              placeholder="Tell us what's on your mind..."></textarea>
+                </div>
+                
+                <button type="submit" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Submit Application
+                </button>
+            </form>
+            
+            <div id="successMessage" class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="font-medium">Application submitted successfully!</span>
+                </div>
+                <p class="mt-1 text-sm">Thank you for your application. We'll review it and get back to you soon.</p>
+            </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600 bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                <span class="font-semibold text-yellow-800">Demo Form:</span> This is a sample contact form. In a real application, form submissions would be processed by a backend server.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const firstName = formData.get('firstName');
+            const lastName = formData.get('lastName');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const birthdate = formData.get('birthdate');
+            const gender = formData.get('gender');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Simple validation
+            const occupation = formData.get('occupation');
+            const currentStreet = formData.get('currentStreet');
+            const currentCity = formData.get('currentCity');
+            const currentState = formData.get('currentState');
+            const currentZip = formData.get('currentZip');
+            const permanentStreet = formData.get('permanentStreet');
+            const permanentCity = formData.get('permanentCity');
+            const permanentState = formData.get('permanentState');
+            const permanentZip = formData.get('permanentZip');
+            
+            if (!firstName || !lastName || !email || !phone || !birthdate || !gender || !occupation || 
+                !currentStreet || !currentCity || !currentState || !currentZip ||
+                !permanentStreet || !permanentCity || !permanentState || !permanentZip ||
+                !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate form submission
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            
+            button.textContent = 'Submitting Application...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                // Show success message
+                document.getElementById('successMessage').classList.remove('hidden');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                button.textContent = originalText;
+                button.disabled = false;
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+        
+        // Add smooth focus animations
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('transform', 'scale-105');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.classList.remove('transform', 'scale-105');
+            });
+        });
+        
+        // Handle "Same as current address" checkbox
+        document.getElementById('sameAsCurrentAddress').addEventListener('change', function() {
+            const permanentFields = document.getElementById('permanentAddressFields');
+            const permanentInputs = permanentFields.querySelectorAll('input');
+            
+            if (this.checked) {
+                // Copy current address to permanent address
+                document.getElementById('permanentStreet').value = document.getElementById('currentStreet').value;
+                document.getElementById('permanentCity').value = document.getElementById('currentCity').value;
+                document.getElementById('permanentState').value = document.getElementById('currentState').value;
+                document.getElementById('permanentZip').value = document.getElementById('currentZip').value;
+                
+                // Disable permanent address fields
+                permanentInputs.forEach(input => {
+                    input.disabled = true;
+                    input.classList.add('bg-gray-100');
+                });
+            } else {
+                // Enable permanent address fields
+                permanentInputs.forEach(input => {
+                    input.disabled = false;
+                    input.classList.remove('bg-gray-100');
+                });
+            }
+        });
+        
+        // Auto-copy current address when checkbox is checked and current address changes
+        const currentAddressInputs = ['currentStreet', 'currentCity', 'currentState', 'currentZip'];
+        currentAddressInputs.forEach(fieldId => {
+            document.getElementById(fieldId).addEventListener('input', function() {
+                if (document.getElementById('sameAsCurrentAddress').checked) {
+                    const permanentFieldId = fieldId.replace('current', 'permanent');
+                    document.getElementById(permanentFieldId).value = this.value;
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c81ae4e040ba4f',t:'MTc1NDc1MTQzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
